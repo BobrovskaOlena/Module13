@@ -66,5 +66,16 @@ public class HttpClients {
         return gson.fromJson(response.body(), User.class);
     }
 
+    public static User[] getUsername(URI uri) throws IOException, InterruptedException {
+    HttpRequest request = HttpRequest.newBuilder()
+            .uri(uri)
+            .headers("Content-Type", "application/json")
+            .GET()
+            .build();
+    HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+    System.out.println("System code: "+response.statusCode());
+    return gson.fromJson(response.body(), User[].class);
+    }
+
     }
 
