@@ -1,4 +1,10 @@
 package Tasks;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
 import java.util.*;
@@ -54,8 +60,52 @@ public class HttpClientsTests {
         System.out.println("Please print ID of user for searching user's comments: ");
         int idComments = new Scanner(System.in).nextInt();
         List<Posts> postsList = HttpClients.getPosts(URI.create(String.format("%s/%d/%s", myUrl, idComments, "posts")));
-        System.out.println(postsList);
+
+        Integer max = postsList
+                .stream()
+                .max(Comparator.comparing(Posts::getId))
+                .orElseThrow(NoSuchElementException::new)
+                .getId();
+        System.out.println(max);
+        /*Comments[] com = HttpClients.getCommentInMaxId(URI.create(String.format("%s/%d/%s", urlPosts, max, "comments")));
+        if (com.length == 0) { System.out.println("ID not exist.");
+        } else {
+            Gson gson = new GsonBuilder()
+                    .setPrettyPrinting()
+                    .create();
+            String myJson = gson.toJson(com);
+
+        File file = new File(newPath, String.format("user-%d-post-%d-comments.json", idComments, max));
+         if (!file.exists()) {
+            try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file))) {
+                bufferedWriter.write(myJson);
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
+        }*/
+
+
+
+        System.out.println("Task 3: ");
+        System.out.println("Please print ID");
+        Integer scanner6 = new Scanner(System.in).nextInt();
+        List<Todos> todos = HttpClients.sendTodos(URI.create(String.format("%s/%d/%s", myUrl, scanner6, "todos")));
+        if (todos.size() == 0) {
+            System.out.println("This id doesn't exist.");
+        } else {
+            for (Todos todo : todos) {
+                if (!todo.isCompleted()) {
+                    System.out.println(todo);
+                }
+            }
         }
+
+
+    }
+
+
+
+
 
     public static User createNewUser() {
         User user = new User();

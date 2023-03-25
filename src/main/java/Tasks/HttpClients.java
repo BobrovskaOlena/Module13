@@ -101,6 +101,14 @@ public class HttpClients {
     }
 
     //Task 3
-
+    public static List<Todos> sendTodos (URI uri) throws IOException, InterruptedException {
+    HttpRequest request = HttpRequest.newBuilder()
+            .uri(uri)
+            .headers("Content-Type", "application/json")
+            .GET()
+            .build();
+    HttpResponse <String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+    return gson.fromJson(response.body(),new TypeToken<List<Todos>>(){}.getType());
+         }
     }
 
