@@ -7,12 +7,14 @@ import java.util.StringJoiner;
 
 public class HttpClientsTests {
     private static final String myUrl = "https://jsonplaceholder.typicode.com/users";
+    private static final String urlPosts = "https://jsonplaceholder.typicode.com/users/1/posts";
+    private static final String urlComments = "https://jsonplaceholder.typicode.com/posts/10/comments";
     public static void main(String[] args) throws IOException, InterruptedException {
            System.out.println("Task 1.1: " + HttpClients.postNewUser(URI.create(myUrl), createNewUser()));
 
            System.out.println("Task 1.2: Please write the ID for update name");
-           int id = Integer.parseInt(new Scanner(System.in).nextLine());
-             System.out.println("User before update: ");
+              int id = Integer.parseInt(new Scanner(System.in).nextLine());
+              System.out.println("User before update: ");
               User userWithYourId = HttpClients.getUserFromID(URI.create(String.format("%s/%d", myUrl, id)));
               System.out.println(userWithYourId);
               System.out.println("Please print new name for user: ");
