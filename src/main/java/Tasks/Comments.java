@@ -1,4 +1,4 @@
-package model;
+package Tasks;
 
 public class Comments {
     private String postId;
@@ -45,5 +45,15 @@ public class Comments {
 
     public void setBody(String body) {
         this.body = body;
+    }
+    @Override
+    public String toString() {
+        return "Comment {" +
+                "postId: " + postId +
+                ", id: " + id +
+                ", name: " + name + '\'' +
+                ", email: " + email + '\'' +
+                ", body: " + body + '\'' +
+                '}';
     }
 }

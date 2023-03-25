@@ -1,10 +1,9 @@
-package model;
+package Tasks;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
-import java.lang.reflect.Type;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -15,6 +14,7 @@ public class HttpClients {
     private static final HttpClient client = HttpClient.newHttpClient();
     private static final Gson gson = new Gson();
 
+    //Task 1
     public static User postNewUser(URI uri, User user) throws IOException, InterruptedException {
         String body = gson.toJson(user);
          HttpRequest request = HttpRequest.newBuilder()
@@ -76,6 +76,31 @@ public class HttpClients {
     System.out.println("System code: "+response.statusCode());
     return gson.fromJson(response.body(), User[].class);
     }
+
+    //Task 2
+
+    public static List<Posts> getPosts (URI uri) throws IOException, InterruptedException {
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(uri)
+                .headers("Content-Type", "application/json")
+                .GET()
+                .build();
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        System.out.println("Status code: "+response.statusCode());
+        return gson.fromJson(response.body(), new TypeToken<List<Posts>>(){}.getType());
+    }
+
+    public static Comments[] getCommentInMaxId (URI uri) throws IOException, InterruptedException {
+    HttpRequest request = HttpRequest.newBuilder()
+            .uri(uri)
+            .headers("Content-Type", "application/json")
+            .GET()
+            .build();
+    HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+    return gson.fromJson(response.body(), Comments[].class);
+    }
+
+    //Task 3
 
     }
 

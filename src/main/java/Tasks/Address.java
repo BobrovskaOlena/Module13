@@ -1,4 +1,4 @@
-package model;
+package Tasks;
 
 public class Address {
     private String street;

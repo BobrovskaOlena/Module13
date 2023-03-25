@@ -1,4 +1,4 @@
-package model;
+package Tasks;
 
 public class User {
 private int id;

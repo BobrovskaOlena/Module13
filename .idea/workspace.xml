@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="252ed733-3e0c-4de2-842d-83e4112b30cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Comments.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Posts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/HttpClientsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/HttpClientsTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HttpTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tasks/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tasks/Comments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tasks/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Geo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tasks/Geo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/HttpClients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tasks/HttpClients.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/HttpClientsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tasks/HttpClientsTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Posts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tasks/Posts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tasks/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HttpTask.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/JsonPlaceHolderApi.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,11 +60,11 @@
 }</component>
   <component name="RunManager" selected="Application.HttpClientsTests">
     <configuration name="HttpClientsTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="model.HttpClientsTests" />
+      <option name="MAIN_CLASS_NAME" value="Tasks.HttpClientsTests" />
       <module name="Module13" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="model.*" />
+          <option name="PATTERN" value="Tasks.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -69,7 +77,7 @@
       <module name="Module13" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="model.*" />
+          <option name="PATTERN" value="Tasks.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -89,7 +97,7 @@
       <module name="Module13" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="model.*" />
+          <option name="PATTERN" value="Tasks.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
