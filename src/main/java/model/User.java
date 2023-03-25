@@ -1,7 +1,7 @@
 package model;
 
 public class User {
-private String id;
+private int id;
 private String name;
 private String username;
 private String email;
@@ -10,7 +10,7 @@ private String phone;
 private String website;
 private Company company;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
@@ -42,7 +42,7 @@ private Company company;
         return company;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="252ed733-3e0c-4de2-842d-83e4112b30cd" name="Changes" comment="" />
+    <list default="true" id="252ed733-3e0c-4de2-842d-83e4112b30cd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/HttpClients.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/HttpClientsTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HttpTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HttpTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JsonPlaceHolderApiClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HttpTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HttpTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/JsonPlaceHolderApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/JsonPlaceHolderApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,22 +49,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
-}</component>
-  <component name="RunManager" selected="Application.JsonPlaceHolderApi">
+}]]></component>
+  <component name="RunManager" selected="Application.JsonPlaceHolderApiClient">
     <configuration name="HttpTask" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.HttpTask" />
       <module name="Module13" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HttpTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="HttpTests" />
+      <module name="Module13" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -63,7 +82,7 @@
       <module name="Module13" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -72,7 +91,7 @@
       </method>
     </configuration>
     <configuration name="JsonPlaceHolderApiClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="JsonPlaceHolderApiClient" />
+      <option name="MAIN_CLASS_NAME" value="model.JsonPlaceHolderApiClient" />
       <module name="Module13" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -80,9 +99,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JsonPlaceHolderApi" />
         <item itemvalue="Application.JsonPlaceHolderApiClient" />
+        <item itemvalue="Application.HttpTests" />
         <item itemvalue="Application.HttpTask" />
+        <item itemvalue="Application.JsonPlaceHolderApi" />
       </list>
     </recent_temporary>
   </component>

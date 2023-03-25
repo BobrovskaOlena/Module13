@@ -13,6 +13,7 @@ public class HttpTask {
     public static void main(String[] args) throws IOException {
         String uri =  "https://jsonplaceholder.typicode.com/users";
         URL url = new URL(uri);
+        //отримання інформації про всіх користувачів
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("GET");
         InputStream stream = connection.getInputStream();
@@ -20,7 +21,7 @@ public class HttpTask {
         String response;
         response = reader.lines().reduce(String::concat).get();
         System.out.println(response);
-       connection.setRequestMethod("POST");
+      /* connection.setRequestMethod("POST");
        connection.setDoOutput(true);
        String jsonText = "[  {    \"id\": 11, " +
                "   \"name\": \"Leanne Graham\",  " +
@@ -52,8 +53,8 @@ public class HttpTask {
         BufferedReader reader1 = new BufferedReader(new InputStreamReader(stream1));
         String response1 = reader1.lines().reduce(String::concat).get();
         System.out.println("response1 = " + response1);
-        }
+        }*/
 
 
-    }
+    }}
 

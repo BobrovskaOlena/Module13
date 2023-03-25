@@ -15,17 +15,15 @@ import java.net.http.HttpResponse;
 import java.nio.file.Files;
 
 public class HttpTests {
-    private static final HttpClient client = HttpClient.newHttpClient();
+    /*private static final HttpClient client = HttpClient.newHttpClient();
     private static final Gson gson = new Gson();
     public static User sendPOST(URI uri, User user) throws IOException, InterruptedException {
         final String bodyOfRequest = gson.toJson(user);
         return user;
     }
-}
-   /* private static final String myUrl =
+}*/
+    private static final String myUrl =
             "https://jsonplaceholder.typicode.com/users";
-
-}
 
     public static void main(String[] args) throws IOException {
         sendGET();
@@ -82,4 +80,4 @@ public class HttpTests {
         }
     }
 }
-*/
+

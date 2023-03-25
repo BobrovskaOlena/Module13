@@ -18,24 +18,7 @@ private User user;
         connection.setRequestProperty("Content-Type", "application/json");
 
         // Тіло запиту - JSON з даними для нового об'єкту
-        String body = "User {\"id\": \"11\", " +
-                "\"name\": \"Test User\"," +
-                " \"username\": \"TestUser\", " +
-                "\"email\": \"testuser@gmail.com\", " +
-                "\"address\":{\n" +
-                "      \"street\": \"Kul Light\",\n" +
-                "      \"suite\": \"Apt. 6\",\n" +
-                "      \"city\": \"Lviv" +
-                "      \"zipcode\": \"92998-3874\",\n" +
-                "      \"geo\": {\n" +
-                "        \"lat\": \"-37.3159\",\n" +
-                "        \"lng\": \"81.1496\"}";
-
-                "\"address\": "+address+"\", " +
-                "\"phone\": "+phone+"\", " +
-                "\"website\": "+website+"\", " +
-                "\"company\": "+company+ " }";
-              //
+        String body = "{\"name\": \"Test User\", \"username\": \"testUser\", \"email\": \"testuser@gmail.com\", }";
 
         connection.setDoOutput(true);
         OutputStream os = connection.getOutputStream();
