@@ -40,11 +40,16 @@ public class HttpClientsTests {
            System.out.println("Task 1.2: Please write the ID for update name");
            int id = Integer.parseInt(new Scanner(System.in).nextLine());
              System.out.println("User before update: ");
-                /*User userWithYourId = HttpClients.sendGET_User(URI.create(String.format("%s/%d", USERS_URL, userId)));
-        System.out.println(userWithYourId);
-        userWithYourId.setName("Alex");
-        User userAfterRename = HttpClients.updateUser(URI.create(String.format("%s/%d", USERS_URL, userId)), userWithYourId);
-        System.out.println("User after update: " + userAfterRename);*/
+              User userWithYourId = HttpClients.getUserFromID(URI.create(String.format("%s/%d", myUrl, id)));
+              System.out.println(userWithYourId);
+              System.out.println("Please print new name for user: ");
+              String scanner1 = new Scanner(System.in).nextLine();
+              userWithYourId.setName(scanner1);
+              User userAfterUpdate = HttpClients.updateUser(URI.create(String.format("%s/%d", myUrl, id)), userWithYourId);
+              System.out.println("User after update: " + userAfterUpdate);
 
+              System.out.println("Task 1.3 : ");
+              System.out.println("Please print user for delete: " );
+              Scanner scanner3 = new Scanner(System.in).nextLine();
 
         }}
