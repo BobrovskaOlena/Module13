@@ -11,14 +11,27 @@ import java.net.http.HttpResponse;
 public class HttpClients {
     private static final HttpClient client = HttpClient.newHttpClient();
     private static final Gson gson = new Gson();
+
     public static User postNewUser(URI uri, User user) throws IOException, InterruptedException {
-    String body = gson.toJson(user);
-        HttpRequest request = HttpRequest.newBuilder()
+        String body = gson.toJson(user);
+         HttpRequest request = HttpRequest.newBuilder()
                 .uri(uri)
                 .headers("Content-Type", "application/json")
                 .POST(HttpRequest.BodyPublishers.ofString(body))
                 .build();
-        HttpResponse <String> response =client.send(request, HttpResponse.BodyHandlers.ofString());
+         HttpResponse <String> response =client.send(request, HttpResponse.BodyHandlers.ofString());
+        System.out.println("Status cod " +response.statusCode());
+        return gson.fromJson(response.body(), User.class);
+    }
+    public static User updateUser(URI uri, User user) throws IOException, InterruptedException {
+        String body = gson.toJson(user);
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(uri)
+                .headers("Content-Type", "application/json")
+                .PUT(HttpRequest.BodyPublishers.ofString(body))
+                .build();
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        System.out.println("Status cod " +response.statusCode());
         return gson.fromJson(response.body(), User.class);
     }
 }

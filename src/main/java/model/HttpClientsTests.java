@@ -1,9 +1,10 @@
 package model;
 import java.io.IOException;
 import java.net.URI;
+import java.util.Scanner;
 
 public class HttpClientsTests {
-    private static final String myUrl = "https://jsonplaceholder.typicode.com";
+    private static final String myUrl = "https://jsonplaceholder.typicode.com/users";
 
     public static User createNewUser() {
         User user = new User();
@@ -34,7 +35,16 @@ public class HttpClientsTests {
         return user;
     }
     public static void main(String[] args) throws IOException, InterruptedException {
-            System.out.println("Task 1.1: " + HttpClients.postNewUser(URI.create(myUrl), createNewUser()));
-           }
+           System.out.println("Task 1.1: " + HttpClients.postNewUser(URI.create(myUrl), createNewUser()));
 
-        }
+           System.out.println("Task 1.2: Please write the ID for update name");
+           int id = Integer.parseInt(new Scanner(System.in).nextLine());
+             System.out.println("User before update: ");
+                /*User userWithYourId = HttpClients.sendGET_User(URI.create(String.format("%s/%d", USERS_URL, userId)));
+        System.out.println(userWithYourId);
+        userWithYourId.setName("Alex");
+        User userAfterRename = HttpClients.updateUser(URI.create(String.format("%s/%d", USERS_URL, userId)), userWithYourId);
+        System.out.println("User after update: " + userAfterRename);*/
+
+
+        }}
