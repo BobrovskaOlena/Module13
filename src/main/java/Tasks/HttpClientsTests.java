@@ -67,7 +67,7 @@ public class HttpClientsTests {
                 .orElseThrow(NoSuchElementException::new)
                 .getId();
         System.out.println(max);
-        
+
         // ЗВІДСИ В ЗАДАЧІ 2 ВИНИКАЄ ПОМИЛКА. НЕ РОЗУМІЮ, ЩО НЕ ТАК
 
         Comment[] com = HttpClients.getCommentInMaxId(URI.create(String.format("%s/%d/%s", urlPosts, max, "comments")));
