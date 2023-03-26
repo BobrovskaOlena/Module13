@@ -1,6 +1,6 @@
 package Tasks;
 
-public class Comments {
+public class Comment {
     private String postId;
     private String id;
     private String name;

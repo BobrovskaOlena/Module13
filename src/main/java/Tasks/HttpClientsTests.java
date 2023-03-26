@@ -13,7 +13,7 @@ public class HttpClientsTests {
     private static final String myUrl = "https://jsonplaceholder.typicode.com/users";
     private static final String urlPosts = "https://jsonplaceholder.typicode.com/users/1/posts";
     private static final String newPath = "src/main/java/Tasks";
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) throws IOException, InterruptedException, IllegalStateException {
         System.out.println("Task 1.1: " + HttpClients.postNewUser(URI.create(myUrl), createNewUser()));
 
         System.out.println("Task 1.2: Please write the ID for update name");
@@ -67,7 +67,10 @@ public class HttpClientsTests {
                 .orElseThrow(NoSuchElementException::new)
                 .getId();
         System.out.println(max);
-        /*Comments[] com = HttpClients.getCommentInMaxId(URI.create(String.format("%s/%d/%s", urlPosts, max, "comments")));
+        
+        // ЗВІДСИ В ЗАДАЧІ 2 ВИНИКАЄ ПОМИЛКА. НЕ РОЗУМІЮ, ЩО НЕ ТАК
+
+        Comment[] com = HttpClients.getCommentInMaxId(URI.create(String.format("%s/%d/%s", urlPosts, max, "comments")));
         if (com.length == 0) { System.out.println("ID not exist.");
         } else {
             Gson gson = new GsonBuilder()
@@ -82,7 +85,7 @@ public class HttpClientsTests {
             } catch (IOException e) {
                 System.out.println(e.getMessage());
             }
-        }*/
+        }
 
 
 
@@ -101,7 +104,7 @@ public class HttpClientsTests {
         }
 
 
-    }
+    }}
 
 
 

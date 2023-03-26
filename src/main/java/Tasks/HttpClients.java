@@ -90,14 +90,14 @@ public class HttpClients {
         return gson.fromJson(response.body(), new TypeToken<List<Posts>>(){}.getType());
     }
 
-    public static Comments[] getCommentInMaxId (URI uri) throws IOException, InterruptedException {
+    public static Comment[] getCommentInMaxId (URI uri) throws IOException, InterruptedException {
     HttpRequest request = HttpRequest.newBuilder()
             .uri(uri)
             .headers("Content-Type", "application/json")
             .GET()
             .build();
     HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-    return gson.fromJson(response.body(), Comments[].class);
+    return gson.fromJson(response.body(), Comment[].class);
     }
 
     //Task 3
