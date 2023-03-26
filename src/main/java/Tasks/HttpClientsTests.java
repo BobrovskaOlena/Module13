@@ -12,7 +12,7 @@ import java.util.*;
 public class HttpClientsTests {
     private static final String myUrl = "https://jsonplaceholder.typicode.com/users";
     private static final String urlPosts = "https://jsonplaceholder.typicode.com/users/1/posts";
-    private static final String newPath = "src/main/java/Tasks";
+    private static final String newPath = "src/main/resources";
     public static void main(String[] args) throws IOException, InterruptedException, IllegalStateException {
         System.out.println("Task 1.1: " + HttpClients.postNewUser(URI.create(myUrl), createNewUser()));
 
@@ -71,43 +71,39 @@ public class HttpClientsTests {
         // ЗВІДСИ В ЗАДАЧІ 2 ВИНИКАЄ ПОМИЛКА. НЕ РОЗУМІЮ, ЩО НЕ ТАК
 
         Comment[] com = HttpClients.getCommentInMaxId(URI.create(String.format("%s/%d/%s", urlPosts, max, "comments")));
-        if (com.length == 0) { System.out.println("ID not exist.");
+        if (com.length == 0) {
+            System.out.println("ID not exist.");
         } else {
             Gson gson = new GsonBuilder()
                     .setPrettyPrinting()
                     .create();
             String myJson = gson.toJson(com);
-
-        File file = new File(newPath, String.format("user-%d-post-%d-comments.json", idComments, max));
-         if (!file.exists()) {
-            try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file))) {
-                bufferedWriter.write(myJson);
-            } catch (IOException e) {
-                System.out.println(e.getMessage());
+            File file = new File(newPath, String.format("user-%d-post-%d-comments.json", idComments, max));
+            if (!file.exists()) {
+                try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file))) {
+                    bufferedWriter.write(myJson);
+                } catch (IOException e) {
+                    System.out.println(e.getMessage());
+                }
             }
-        }
 
 
 
-        System.out.println("Task 3: ");
-        System.out.println("Please print ID");
-        Integer scanner6 = new Scanner(System.in).nextInt();
-        List<Todos> todos = HttpClients.sendTodos(URI.create(String.format("%s/%d/%s", myUrl, scanner6, "todos")));
-        if (todos.size() == 0) {
-            System.out.println("This id doesn't exist.");
-        } else {
-            for (Todos todo : todos) {
-                if (!todo.isCompleted()) {
-                    System.out.println(todo);
+            System.out.println("Task 3: ");
+            System.out.println("Please print ID");
+            Integer scanner6 = new Scanner(System.in).nextInt();
+            List<Todos> todos = HttpClients.sendTodos(URI.create(String.format("%s/%d/%s", myUrl, scanner6, "todos")));
+            if (todos.size() == 0) {
+                System.out.println("This id doesn't exist.");
+            } else {
+                for (Todos todo : todos) {
+                    if (!todo.isCompleted()) {
+                        System.out.println(todo);
+                    }
                 }
             }
         }
-
-
-    }}
-
-
-
+    }
 
 
     public static User createNewUser() {
