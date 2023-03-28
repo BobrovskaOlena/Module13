@@ -11,7 +11,7 @@ import java.util.*;
 
 public class HttpClientsTests {
     private static final String myUrl = "https://jsonplaceholder.typicode.com/users";
-    private static final String urlPosts = "https://jsonplaceholder.typicode.com/users/1/posts";
+    private static final String urlPosts = "https://jsonplaceholder.typicode.com/posts";
     private static final String newPath = "src/main/resources";
     public static void main(String[] args) throws IOException, InterruptedException, IllegalStateException {
         System.out.println("Task 1.1: " + HttpClients.postNewUser(URI.create(myUrl), createNewUser()));
@@ -85,7 +85,7 @@ public class HttpClientsTests {
                 } catch (IOException e) {
                     System.out.println(e.getMessage());
                 }
-            }
+            }}
 
 
 
@@ -103,7 +103,7 @@ public class HttpClientsTests {
                 }
             }
         }
-    }
+
 
 
     public static User createNewUser() {
